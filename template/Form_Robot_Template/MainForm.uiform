@@ -1,0 +1,59 @@
+﻿{
+  "Metadata": {
+    "Id": "f7ba2d48-0bae-4ca0-9d2d-aa8cc3b869e1",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "MainForm",
+    "Height": 680,
+    "Theme": "Cosmo",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "tag": "h2",
+        "content": "Robot Name",
+        "key": "Header",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "content": "Robot Description<br>\nロボットの説明文などを記載",
+        "key": "Description",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "label": "Text Field 1",
+        "tableView": true,
+        "key": "textField1",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Text Field 2",
+        "tableView": true,
+        "key": "textField2",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Execute Button",
+        "action": "event",
+        "showValidations": false,
+        "block": true,
+        "tableView": false,
+        "key": "GetDate",
+        "type": "button",
+        "input": true
+      }
+    ]
+  }
+}
