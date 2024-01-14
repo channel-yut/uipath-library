@@ -1,0 +1,70 @@
+{
+  "name": "Form Robot Template",
+  "projectId": "acca1322-7f4b-431a-9735-ddbf6a75c74e",
+  "description": "フォームを持つロボットのテンプレートです。",
+  "main": "Main.xaml",
+  "dependencies": {
+    "library_SettingFile_Common": "[1.0.8]",
+    "UiPath.Form.Activities": "[23.10.5]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.4.3]",
+    "UiPath.System.Activities": "[23.10.3]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.7]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.3.0",
+  "projectVersion": "1.0.5",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "6decdc47-b0d2-44fa-aa0e-4f09d8b1a410",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": true,
+  "templateProjectData": {
+    "defaultProjectDescription": "フォームを持つロボットプロセスです。",
+    "defaultProjectName": "Form Robot Process"
+  },
+  "publishData": {
+    "iconUrl": ".package/icon.png"
+  },
+  "targetFramework": "Windows",
+  "automationHubIdeaUrl": ""
+}
