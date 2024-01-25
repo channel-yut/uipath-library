@@ -1,0 +1,1 @@
+{"Workflows":[{"FilePath":"Main.xaml","Activities":[{"IdRef":"OrchestratorHttpRequest_1","TemplateValueProperties":["FolderPath"]},{"IdRef":"AssignOperation_8","TemplateValueProperties":["Value"]}]}]}

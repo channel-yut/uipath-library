@@ -1,26 +1,26 @@
 {
-  "name": "Form Robot Template",
-  "projectId": "acca1322-7f4b-431a-9735-ddbf6a75c74e",
-  "description": "フォームを持つロボットのテンプレートです。",
+  "name": "Orchestrator Job Checker Template",
+  "projectId": "cc6e2adc-fb23-4ad1-af27-9d886ea57679",
+  "description": "Orchestrator API を活用して Orchestrator 上の Job 情報を取得し、条件に該当するものをが存在する場合にはレポートするテンプレートです。",
   "main": "Main.xaml",
   "dependencies": {
-    "library_SettingFile_Common": "[1.0.8]",
-    "UiPath.Form.Activities": "[23.10.5]",
-    "UiPath.MicrosoftOffice365.Activities": "[2.4.3]",
+    "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.Mail.Activities": "[1.21.1]",
     "UiPath.System.Activities": "[23.10.3]",
     "UiPath.Testing.Activities": "[23.10.0]",
-    "UiPath.UIAutomation.Activities": "[23.10.7]"
+    "UiPath.UIAutomation.Activities": "[23.10.7]",
+    "UiPath.WebAPI.Activities": "[1.18.0]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.3.0",
-  "projectVersion": "1.0.6",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
-    "isAttended": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",
@@ -52,19 +52,18 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "6decdc47-b0d2-44fa-aa0e-4f09d8b1a410",
+      "uniqueId": "cbad7491-7d74-4568-aa25-3da011cc5b25",
       "input": [],
       "output": []
     }
   ],
   "isTemplate": true,
   "templateProjectData": {
-    "defaultProjectDescription": "フォームを持つロボットのプロセスです。",
-    "defaultProjectName": "Form Robot Process"
+    "defaultProjectDescription": "Orchestrator API を活用して Orchestrator 上の Job 情報を取得し、条件に該当するものをが存在する場合に処理を実行します。",
+    "defaultProjectName": "Orchestrator Job Checker"
   },
   "publishData": {
     "iconUrl": ".package/icon.png"
   },
-  "targetFramework": "Windows",
-  "automationHubIdeaUrl": ""
+  "targetFramework": "Windows"
 }
