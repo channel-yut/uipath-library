@@ -50,7 +50,7 @@
         "showValidations": false,
         "block": true,
         "tableView": false,
-        "key": "GetDate",
+        "key": "Execute",
         "type": "button",
         "input": true
       }

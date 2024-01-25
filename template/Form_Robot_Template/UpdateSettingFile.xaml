@@ -1,10 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="UpdateSettingFile" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:library_SettingFile_Common;assembly=library_SettingFile_Common" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="str_item1" Type="InArgument(x:String)" />
-    <x:Property Name="str_item2" Type="InArgument(x:String)" />
-  </x:Members>
-  <sap:VirtualizedContainerService.HintSize>594,746</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="UpdateSettingFile" sap:VirtualizedContainerService.HintSize="1244,962" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:library_SettingFile_Common;assembly=library_SettingFile_Common" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -108,12 +102,11 @@
       <AssemblyReference>PresentationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="設定ファイルの更新処理ファイルです。&#xD;&#xA;Dictionary(Of String, String)型に設定値を成形し、&#xD;&#xA;ライブラリを活用して設定ファイルに値を保存します。" DisplayName="UpdateSettingFile" sap:VirtualizedContainerService.HintSize="540.6666666666666,681.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap2010:Annotation.AnnotationText="設定ファイルの更新処理ファイルです。&#xA;Dictionary(Of String, String)型に設定値を成形し、&#xA;ライブラリを活用して設定ファイルに値を保存します。" DisplayName="UpdateSettingFile" sap:VirtualizedContainerService.HintSize="540.6666666666666,897.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Double" Name="int_Fee" />
-      <Variable x:TypeArguments="x:Double" Name="int_Date" />
-      <Variable x:TypeArguments="x:String" Name="str_Text" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dc_SettingInfo" />
+      <Variable x:TypeArguments="x:String" Name="str_item1" />
+      <Variable x:TypeArguments="x:String" Name="str_item2" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -121,7 +114,18 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Dictionary(Of String, String)型に設定値を格納します。" DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="478.6666666666667,209.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ufa:GetFormFieldsActivity InstanceName="{x:Null}" sap2010:Annotation.AnnotationText="フォームから入力された値を取得します。" DisplayName="フォームの値を取得" FormId="f7ba2d48-0bae-4ca0-9d2d-aa8cc3b869e1" sap:VirtualizedContainerService.HintSize="478.6666666666667,176" sap2010:WorkflowViewState.IdRef="GetFormFieldsActivity_1">
+      <ufa:GetFormFieldsActivity.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="textField1">[str_item1]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="textField2">[str_item2]</OutArgument>
+      </ufa:GetFormFieldsActivity.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ufa:GetFormFieldsActivity>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Dictionary(Of String, String)型に設定値を格納します。" DisplayName="現在のフォームの値を格納" sap:VirtualizedContainerService.HintSize="478.6666666666667,209.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -139,13 +143,6 @@
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">[str_item1]</InArgument>
             </ui:AssignOperation.Value>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <scg:List x:TypeArguments="x:String" x:Key="TemplateValues" Capacity="1">
-                  <x:String>Value</x:String>
-                </scg:List>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
             <ui:AssignOperation.To>
@@ -154,13 +151,6 @@
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">[str_item2]</InArgument>
             </ui:AssignOperation.Value>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <scg:List x:TypeArguments="x:String" x:Key="TemplateValues" Capacity="1">
-                  <x:String>Value</x:String>
-                </scg:List>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
@@ -170,7 +160,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <l:設定ファイルに情報を保存 BasePath="{x:Null}" sap2010:Annotation.AnnotationText="設定ファイルに値を保存します。&#xD;&#xA;FileNameはMainファイルで指定したものと&#xD;&#xA;同じ名前に設定します。" FileName="--process name--" sap:VirtualizedContainerService.HintSize="478.6666666666667,259.3333333333333" sap2010:WorkflowViewState.IdRef="設定ファイルに情報を保存_2" SettingInfo="[dc_SettingInfo]">
+    <l:設定ファイルに情報を保存 BasePath="{x:Null}" sap2010:Annotation.AnnotationText="設定ファイルに値を保存します。&#xA;FileNameはMainファイルで指定したものと&#xA;同じ名前に設定します。" FileName="--process name--" sap:VirtualizedContainerService.HintSize="478.6666666666667,259.3333333333333" sap2010:WorkflowViewState.IdRef="設定ファイルに情報を保存_2" SettingInfo="[dc_SettingInfo]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <scg:List x:TypeArguments="x:String" x:Key="TemplateValues" Capacity="1">
